@@ -1,4 +1,11 @@
-<div class="min-h-screen flex items-center justify-center bg-blue-200">
+<nav class="p-4 bg-blue-500 text-white flex justify-between">
+    <a routerLink="/" class="text-lg font-semibold">Startseite</a>
+    <a routerLink="/about" class="text-lg font-semibold">Über Uns</a>
+  </nav>
+  
+  <router-outlet></router-outlet>
+  
+  <div class="min-h-screen flex items-center justify-center bg-blue-200">
     <div class="text-center p-10 bg-white rounded shadow-lg">
       <h1 class="text-3xl font-bold mb-4">Willkommen auf meiner Portfolio Website!</h1>
       <p class="text-lg">Dies ist meine erste Website, erstellt mit Angular und Tailwind CSS.</p>
