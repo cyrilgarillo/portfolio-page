@@ -1,49 +1,11 @@
-<!-- Navigation bar mit Ankern zu den Abschnitten -->
+<!-- Navigation bar mit Angular-Routing -->
 <nav class="fixed top-0 w-full bg-white shadow-md z-10 p-4 flex justify-center space-x-8">
-    <a href="#home" class="text-lg font-semibold hover:text-blue-500">Home</a>
-    <a href="#about" class="text-lg font-semibold hover:text-blue-500">About</a>
-    <a href="#portfolio" class="text-lg font-semibold hover:text-blue-500">Portfolio</a>
-    <a href="#pages" class="text-lg font-semibold hover:text-blue-500">Pages</a>
+    <a routerLink="/" class="text-lg font-semibold hover:text-blue-500">Home</a>
+    <a routerLink="/about" class="text-lg font-semibold hover:text-blue-500">About</a>
+    <a routerLink="/portfolio" class="text-lg font-semibold hover:text-blue-500">Portfolio</a>
+    <a routerLink="/pages" class="text-lg font-semibold hover:text-blue-500">Pages</a>
   </nav>
   
-  <!-- Startseite -->
-  <section id="home" class="min-h-screen flex items-center justify-center bg-blue-200">
-    <div class="text-center p-10 bg-white rounded shadow-lg">
-      <h1 class="text-3xl font-bold mb-4">Willkommen auf meiner Portfolio Website!</h1>
-      <p class="text-lg">Dies ist meine erste Website, erstellt mit Angular und Tailwind CSS.</p>
-      <button class="mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-        EWEB
-      </button>
-    </div>
-  </section>
-  
-  <!-- About Section -->
-  <section id="about" class="min-h-screen flex items-center justify-center bg-gray-100">
-    <div class="text-center p-10 max-w-xl">
-      <h2 class="text-3xl font-bold mb-4">Über Uns</h2>
-      <p class="text-lg">
-        Willkommen auf der Über-uns-Seite! Hier erfährst du mehr über unsere Mission, unsere Werte und das Team hinter dieser Website.
-      </p>
-    </div>
-  </section>
-  
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="min-h-screen flex items-center justify-center bg-white">
-    <div class="text-center p-10 max-w-xl">
-      <h2 class="text-3xl font-bold mb-4">Mein Portfolio</h2>
-      <p class="text-lg">
-        Willkommen auf der Portfolio-Seite! Hier sind einige meiner Projekte und Designs.
-      </p>
-    </div>
-  </section>
-  
-  <!-- Pages Section -->
-  <section id="pages" class="min-h-screen flex items-center justify-center bg-gray-200">
-    <div class="text-center p-10 max-w-xl">
-      <h2 class="text-3xl font-bold mb-4">Zusätzliche Seiten</h2>
-      <p class="text-lg">
-        Dies ist die Seite "Pages", wo zusätzliche Informationen angezeigt werden könnten.
-      </p>
-    </div>
-  </section>
+  <!-- Router Outlet für dynamisches Laden der Seiten -->
+  <router-outlet></router-outlet>
   
