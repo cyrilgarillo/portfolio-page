@@ -1,29 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // Importiere FormsModule
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PagesComponent } from "./pages/pages.component";
-import { AboutComponent } from "./about/about.component";
-import { HomeComponent } from "./home/home.component";
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { PagesComponent } from './pages/pages.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { CryptoDisplayComponent } from './crypto-display/crypto-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PortfolioComponent,  // Nur Nicht-Standalone-Komponenten hier auflisten
-    ContactFormComponent
+    PortfolioComponent, 
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule, // Füge FormsModule hier hinzu
+    FormsModule,
     AppRoutingModule,
+    HomeComponent,  // Standalone-Komponente hinzufügen
+    AboutComponent, // Standalone-Komponente hinzufügen
     PagesComponent,
-    AboutComponent,
-    HomeComponent
-],
+    CryptoDisplayComponent  // Standalone-Komponente hinzufügen
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

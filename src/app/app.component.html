@@ -1,16 +1,22 @@
-<!-- Navigation bar mit Angular-Routing -->
-<nav class="fixed top-0 w-full bg-white shadow-md z-10 p-4 flex justify-center space-x-8">
-    <a routerLink="/" class="text-lg font-semibold hover:text-blue-500">Home</a>
-    <a routerLink="/about" class="text-lg font-semibold hover:text-blue-500">About</a>
-    <a routerLink="/portfolio" class="text-lg font-semibold hover:text-blue-500">Portfolio</a>
-    <a routerLink="/pages" class="text-lg font-semibold hover:text-blue-500">Pages</a>
-  </nav>
-  
-  <!-- Router Outlet für dynamisches Laden der Seiten -->
-  <!-- <router-outlet></router-outlet>-->
-  <app-home></app-home>
-  <app-about></app-about>
-  <app-portfolio></app-portfolio>
-  <app-pages></app-pages>
-  <app-contact-form></app-contact-form>
-  
+<div>
+  <section id="home">
+    <app-home></app-home>
+  </section>
+
+  <section id="about">
+    <app-about></app-about>
+  </section>
+
+  <section id="portfolio">
+    <app-portfolio></app-portfolio>
+  </section>
+
+  <section id="pages">
+    <app-pages></app-pages>
+  </section>
+
+  <section id="crypto-display">
+    <app-crypto-display></app-crypto-display>
+  </section>
+
+</div>

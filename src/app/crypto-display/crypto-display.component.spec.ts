@@ -1,23 +1,30 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-import { CryptoDisplayComponent } from './crypto-display.component';
+@Component({
+  selector: 'app-crypto-display',
+  templateUrl: './crypto-display.component.html',
+  styleUrls: ['./crypto-display.component.css']
+})
+export class CryptoDisplayComponent implements OnInit {
+  public solanaData: any = {};
 
-describe('CryptoDisplayComponent', () => {
-  let component: CryptoDisplayComponent;
-  let fixture: ComponentFixture<CryptoDisplayComponent>;
+  constructor(private http: HttpClient) {}
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [CryptoDisplayComponent]
-    })
-    .compileComponents();
+  ngOnInit(): void {
+    console.log('CryptoDisplayComponent initialized!');
+    this.getSolanaData();
+  }
 
-    fixture = TestBed.createComponent(CryptoDisplayComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  getSolanaData() {
+    this.http.get('https://api.coincap.io/v2/assets/solana').subscribe({
+      next: (response: any) => {
+        console.log('API Response:', response);
+        this.solanaData = response.data;
+      },
+      error: (err) => {
+        console.error('API Error:', err);
+      }
+    });
+  }
+}

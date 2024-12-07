@@ -1,1 +1,10 @@
-<p>crypto-display works!</p>
+<div *ngIf="solanaData">
+    <h2>{{ solanaData.name }} ({{ solanaData.symbol }})</h2>
+    <p>Price (USD): {{ solanaData.priceUsd }}</p>
+    <p>Market Cap: {{ solanaData.marketCapUsd }}</p>
+    <p>Supply: {{ solanaData.supply }}</p>
+  </div>
+  <div *ngIf="!solanaData">
+    <p>Loading data...</p>
+  </div>
+  

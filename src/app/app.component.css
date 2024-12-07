@@ -1,0 +1,12 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  section {
+    display: block;
+    min-height: 100vh; /* Jeder Abschnitt füllt den Bildschirm */
+    padding: 20px;
+  }
+  

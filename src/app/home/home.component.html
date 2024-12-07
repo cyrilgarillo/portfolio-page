@@ -1,22 +1,49 @@
-<div class="min-h-screen flex items-center justify-center bg-gray-50">
-    <div class="flex flex-col md:flex-row items-center max-w-4xl p-6 space-y-6 md:space-y-0 md:space-x-10">
-      <!-- Text-Bereich -->
-      <div class="text-center md:text-left">
-        <p class="text-lg text-gray-500">Hey, I’m Cyril</p>
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-          I enjoy designing tech websites and digital products
-        </h1>
-        <p class="text-gray-400 mt-4">I’m passionate about creating user-centric digital experiences.</p>
-        <a href="#contactForm"> 
+<div class="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+
+  <!-- Buttons oben auf der Seite -->
+  <div class="fixed top-0 left-0 w-full p-4 bg-white shadow-md z-10 flex justify-center space-x-4">
+    <a
+      routerLink="/about"
+      class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition">
+      About
+    </a>
+    <a
+      routerLink="/portfolio"
+      class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition">
+      Portfolio
+    </a>
+    <a
+      routerLink="/pages"
+      class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition">
+      Pages
+    </a>
+    <a
+      routerLink="/crypto"
+      class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition">
+      Crypto
+    </a>
+  </div>
+
+  <!-- Bestehender Inhalt der Seite -->
+  <div class="flex flex-col md:flex-row items-center max-w-4xl p-6 space-y-6 md:space-y-0 md:space-x-10">
+    <!-- Text-Bereich -->
+    <div class="text-center md:text-left">
+      <p class="text-lg text-gray-500">Hey, I’m Cyril</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+        I enjoy designing tech websites and digital products
+      </h1>
+      <p class="text-gray-400 mt-4">I’m passionate about creating user-centric digital experiences.</p>
+      <a href="#contactForm">
         <button routerLink="/contact" class="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600">
           Contact Me
-        </button></a>
-      </div>
-      
-      <!-- Bild-Bereich -->
-      <div class="w-48 h-48 md:w-60 md:h-60">
-        <img src="/profile.png" alt="Profile Picture" class="rounded-full shadow-lg">
-      </div>
+        </button>
+      </a>
+    </div>
+
+    <!-- Bild-Bereich -->
+    <div class="w-48 h-48 md:w-60 md:h-60">
+      <img src="/profile.png" alt="Profile Picture" class="rounded-full shadow-lg">
     </div>
   </div>
-  
+
+</div>

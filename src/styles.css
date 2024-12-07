@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-100 font-sans text-gray-900;
+  @apply bg-gray-50 font-sans text-gray-900;
 }
 
-/* Sanftes Scrollen für die gesamte Seite */
-html {
-  scroll-behavior: smooth;
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Verhindere horizontales Scrollen */
 }
