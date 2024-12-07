@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { PagesComponent } from './pages/pages.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
+  { path: '', loadComponent: () => import('./home/home.component').then(m => m.HomeComponent) },
+  { path: 'about', loadComponent: () => import('./about/about.component').then(m => m.AboutComponent) },
   { path: 'portfolio', component: PortfolioComponent },
-  { path: 'pages', component: PagesComponent }
+  { path: 'pages', loadComponent: () => import('./pages/pages.component').then(m => m.PagesComponent) },
+  { path: 'contact', component: ContactFormComponent }
 ];
 
 @NgModule({

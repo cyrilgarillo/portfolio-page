@@ -8,6 +8,5 @@ body {
 
 /* Sanftes Scrollen für die gesamte Seite */
 html {
-    scroll-behavior: smooth;
-  }
-  
+  scroll-behavior: smooth;
+}
