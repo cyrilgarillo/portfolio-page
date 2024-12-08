@@ -1,7 +1,30 @@
-<div class="p-10 bg-gray-200 min-h-screen flex flex-col items-center justify-center">
-  <h2 class="text-3xl font-bold mb-4">Zusätzliche Seiten</h2>
-  <p class="text-lg max-w-lg text-center">
-    Dies ist die Seite "Pages", wo zusätzliche Informationen angezeigt werden könnten.
-  </p>
-</div>
+<div class="p-10 bg-gray-200 min-h-screen flex flex-col items-center justify-center space-y-6">
+  <h2 class="text-3xl font-bold mb-4">Kryptowährungssuche</h2>
 
+  <!-- Eingabefeld -->
+  <div class="flex space-x-4 items-center">
+    <input
+      [(ngModel)]="cryptoName"
+      placeholder="Kryptowährung eingeben (z.B. bitcoin, solana)"
+      class="px-4 py-2 border rounded w-80"
+    />
+    <button
+      (click)="fetchCryptoData()"
+      class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+      Suchen
+    </button>
+  </div>
+
+  <!-- Ergebnis anzeigen -->
+  <div *ngIf="cryptoData; else noData" class="bg-white shadow-lg rounded-lg p-6 w-full max-w-md text-center">
+    <h3 class="text-2xl font-semibold">{{ cryptoData.name }} ({{ cryptoData.symbol | uppercase }})</h3>
+    <p>Preis: {{ cryptoData.current_price | currency: 'USD' }}</p>
+    <p>Marktkapitalisierung: {{ cryptoData.market_cap | currency: 'USD' }}</p>
+    <p>24h Veränderung: {{ cryptoData.price_change_percentage_24h | number: '1.2-2' }}%</p>
+  </div>
+
+  <!-- Kein Ergebnis -->
+  <ng-template #noData>
+    <p>Bitte geben Sie eine Kryptowährung ein, um die Daten zu sehen.</p>
+  </ng-template>
+</div>

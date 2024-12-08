@@ -1,7 +1,13 @@
-<div class="p-10 bg-gray-100 min-h-screen flex flex-col items-center justify-center">
-    <h2 class="text-3xl font-bold mb-4">Mein Portfolio</h2>
-    <p class="text-lg max-w-lg text-center">
-      Willkommen auf der Portfolio-Seite! Hier sind einige meiner Projekte und Designs.
-    </p>
+<div class="p-10 bg-gray-100 min-h-screen flex flex-col items-center justify-center space-y-6">
+  <h2 class="text-3xl font-bold mb-4">Technology News</h2>
+  <p class="text-lg max-w-lg text-center">
+    Hier sind die neuesten Nachrichten aus der Welt der Technologie.
+  </p>
+
+  <!-- Nachrichten anzeigen -->
+  <div *ngFor="let article of articles" class="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
+    <h3 class="text-xl font-semibold">{{ article.title }}</h3>
+    <p class="text-gray-600">{{ article.author ? 'Author: ' + article.author : 'Unbekannter Autor' }}</p>
+    <a [href]="article.url" target="_blank" class="text-blue-500 hover:underline">Weiterlesen</a>
   </div>
-  
+</div>

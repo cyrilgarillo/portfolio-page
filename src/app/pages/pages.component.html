@@ -1,7 +1,26 @@
-<div class="p-10 bg-gray-200 min-h-screen flex flex-col items-center justify-center">
-    <h2 class="text-3xl font-bold mb-4">Zusätzliche Seiten</h2>
-    <p class="text-lg max-w-lg text-center">
-      Dies ist die Seite "Pages", wo zusätzliche Informationen angezeigt werden könnten.
-    </p>
+<div class="p-10 bg-gray-200 min-h-screen flex flex-col items-center justify-center space-y-8">
+  <h2 class="text-3xl font-bold">Flachwitz und Zitat des Tages</h2>
+
+  <!-- Flachwitz-Anzeige -->
+  <div class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center">
+    <h3 class="text-xl font-semibold mb-4">Flachwitz des Tages</h3>
+    <p class="text-gray-700 mb-6">{{ joke }}</p>
+    <button
+      (click)="refreshDadJoke()"
+      class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+      Neuer Witz
+    </button>
   </div>
-  
+
+  <!-- Zitat-Anzeige -->
+  <div class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center">
+    <h3 class="text-xl font-semibold mb-4">Inspirierendes Zitat</h3>
+    <p class="text-gray-700 mb-4 italic">"{{ quote }}"</p>
+    <p class="text-gray-500">- {{ author }}</p>
+    <button
+      (click)="refreshQuote()"
+      class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+      Neues Zitat
+    </button>
+  </div>
+</div>

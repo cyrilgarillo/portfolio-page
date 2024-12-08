@@ -14,15 +14,15 @@
     <a
       routerLink="/portfolio"
       class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition">
-      Portfolio
+      News
     </a>
     <a
       routerLink="/pages"
       class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition">
-      Pages
+      Jokes
     </a>
     <a
-      routerLink="/crypto"
+      routerLink="/cryptoDisplay"
       class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition">
       Crypto
     </a>
@@ -48,16 +48,5 @@
     <div class="w-48 h-48 md:w-60 md:h-60">
       <img src="/profile.png" alt="Profile Picture" class="rounded-full shadow-lg">
     </div>
-  </div>
-
-  <!-- API Zitate-Bereich -->
-  <div class="mt-10 p-6 bg-white shadow-md rounded-lg text-center">
-    <h2 class="text-2xl font-bold mb-4">Inspirierendes Zitat</h2>
-    <p id="quote" class="text-gray-700 italic text-lg mb-4">{{ quote }}</p>
-    <button
-      (click)="fetchQuote()"
-      class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition">
-      Neues Zitat anzeigen
-    </button>
   </div>
 </div>

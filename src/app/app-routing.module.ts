@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'pages', component: PagesComponent },
   { path: 'contact', component: ContactFormComponent },
-  { path: 'crypto', component: CryptoDisplayComponent },
+  { path: 'cryptoDisplay', component: CryptoDisplayComponent },
 ];
 
 @NgModule({
