@@ -1,7 +1,11 @@
 <div class="min-h-screen flex flex-col items-center justify-center bg-gray-50">
-
   <!-- Buttons oben auf der Seite -->
   <div class="fixed top-0 left-0 w-full p-4 bg-white shadow-md z-10 flex justify-center space-x-4">
+    <a
+      routerLink="/home"
+      class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition">
+      Home
+    </a>
     <a
       routerLink="/about"
       class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition">
@@ -30,9 +34,9 @@
     <div class="text-center md:text-left">
       <p class="text-lg text-gray-500">Hey, I’m Cyril</p>
       <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-        I enjoy designing tech websites and digital products
+        Ich gestalte gerne technische Websites und digitale Produkte
       </h1>
-      <p class="text-gray-400 mt-4">I’m passionate about creating user-centric digital experiences.</p>
+      <p class="text-gray-400 mt-4">Tauchen wir zusammen in meine Portfoliopage ein.</p>
       <a href="#contactForm">
         <button routerLink="/contact" class="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600">
           Contact Me
@@ -46,4 +50,14 @@
     </div>
   </div>
 
+  <!-- API Zitate-Bereich -->
+  <div class="mt-10 p-6 bg-white shadow-md rounded-lg text-center">
+    <h2 class="text-2xl font-bold mb-4">Inspirierendes Zitat</h2>
+    <p id="quote" class="text-gray-700 italic text-lg mb-4">{{ quote }}</p>
+    <button
+      (click)="fetchQuote()"
+      class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition">
+      Neues Zitat anzeigen
+    </button>
+  </div>
 </div>

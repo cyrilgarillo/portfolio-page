@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Import CommonModule
-import { HttpClientModule } from '@angular/common/http'; // Falls HttpClient benötigt wird
+import { RouterModule } from '@angular/router'; // RouterModule importieren
 
 @Component({
   selector: 'app-crypto-display',
   standalone: true, // Definiert die Komponente als standalone
-  imports: [CommonModule, HttpClientModule], // Füge CommonModule hier hinzu
+  imports: [RouterModule],
   templateUrl: './crypto-display.component.html',
   styleUrls: ['./crypto-display.component.css']
 })

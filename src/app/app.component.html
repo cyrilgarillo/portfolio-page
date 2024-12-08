@@ -1,22 +1,11 @@
+<nav>
+  <a routerLink="/home" class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600">Home</a>
+  <a routerLink="/about" class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600">About</a>
+  <a routerLink="/portfolio" class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600">Portfolio</a>
+  <a routerLink="/pages" class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600">Pages</a>
+  <a routerLink="/crypto-display" class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600">Crypto</a>
+</nav>
+
 <div>
-  <section id="home">
-    <app-home></app-home>
-  </section>
-
-  <section id="about">
-    <app-about></app-about>
-  </section>
-
-  <section id="portfolio">
-    <app-portfolio></app-portfolio>
-  </section>
-
-  <section id="pages">
-    <app-pages></app-pages>
-  </section>
-
-  <section id="crypto-display">
-    <app-crypto-display></app-crypto-display>
-  </section>
-
+  <router-outlet></router-outlet>
 </div>

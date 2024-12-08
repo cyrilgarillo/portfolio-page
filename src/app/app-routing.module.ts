@@ -8,7 +8,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { CryptoDisplayComponent } from './crypto-display/crypto-display.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'pages', component: PagesComponent },

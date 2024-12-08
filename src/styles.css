@@ -11,3 +11,10 @@ html, body {
   padding: 0;
   overflow-x: hidden; /* Verhindere horizontales Scrollen */
 }
+
+a[routerLink]:hover {
+  @apply bg-red-500 text-white transform rotate-3 transition duration-300 ease-in-out;
+}
+
+
+
