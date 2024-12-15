@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.css']
 })
@@ -9,11 +13,8 @@ export class ContactFormComponent {
   formData = { name: '', email: '', message: '' };
 
   onSubmit() {
-    // Simulierte Aktion bei erfolgreichem Absenden
     alert('Nachricht gesendet! Ich werde mich bald bei Ihnen melden.');
     console.log(this.formData);
-
-    // Reset des Formulars nach dem Absenden
     this.formData = { name: '', email: '', message: '' };
   }
 }
